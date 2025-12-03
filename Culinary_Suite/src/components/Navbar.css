@@ -1,0 +1,84 @@
+/* NAVBAR: full-width, sticky, compact */
+.navbar{
+  position: sticky; top:0; left:0; right:0;
+  height:60px; width:100%;
+  display:flex; align-items:center; gap:16px;
+  padding:0 20px; box-sizing:border-box;
+  background:#0f1418; color:#fff;
+  z-index:1000; border-bottom:1px solid rgba(255,255,255,.1);
+  
+}
+
+/* LEFT: logo + brand + links (takes available space, pushes right group) */
+.nav-left{ display:flex; align-items:center; gap:10px; flex:0 0 auto; }
+.logo{ width:34px; height:34px; border-radius:8px; object-fit:cover; }
+.brand{ font-size:18px; font-weight:700; margin-right:10px; }
+
+.nav-links{
+  display:flex; align-items:center; gap:14px;
+  flex:1 1 auto;               /* ← this lets it grow and pushes right side */
+  margin:0 0 0 12px; padding:0;
+  overflow:hidden;              /* no wrapping/overflow bullets */
+  list-style:none;
+}
+.nav-links li{ list-style:none; white-space:nowrap; }
+.nav-links a{ color:#e8ecef; text-decoration:none; font-size:15px; font-weight:500; }
+.nav-links a:hover{ color:#fff; }
+
+/* RIGHT: search + veg + avatar (fixed size, never overlaps left) */
+.nav-right{
+  flex:0 0 auto;
+  display:flex; align-items:center; gap:10px;
+}
+
+/* Search shrinks if space is tight */
+.search-form{
+  display:flex; align-items:center; gap:6px;
+  background:#1a2228; padding:6px 8px; border-radius:12px;
+  flex:0 1 380px;               /* ← max width but allowed to shrink */
+  min-width:180px;              /* ← prevent too small */
+}
+.search-form input{
+  width:100%; background:transparent; border:none; outline:none; color:#e8ecef;
+}
+.search-form button{
+  background:transparent; border:none; cursor:pointer; font-size:16px; color:#d0d7dc;
+}
+
+/* Veg toggle (unchanged, compact) */
+.veg-container{ position:relative; display:flex; align-items:center; gap:8px; }
+#vegModeText{ margin:0; font-weight:700; letter-spacing:.5px; }
+.switch{ position:relative; display:inline-block; width:44px; height:24px; }
+.switch input{ display:none; }
+.slider{ position:absolute; inset:0; background:#32424c; border-radius:24px; transition:.2s; }
+.slider:before{ content:""; position:absolute; width:18px; height:18px; left:3px; top:3px; background:#fff; border-radius:50%; transition:.2s; }
+.switch input:checked + .slider{ background:#2ea043; }
+.switch input:checked + .slider:before{ transform:translateX(20px); }
+
+.dropdown{
+  position:absolute; top:calc(100% + 8px); right:0; min-width:220px;
+  background:#12181d; border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:12px; z-index:30;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+
+/* Avatar now participates in flex (no absolute = no overlap) */
+.user-menu{ position:relative; }
+.user-avatar{
+  width:38px; height:38px; border-radius:50%; object-fit:cover; cursor:pointer;
+  border:2px solid rgba(255,255,255,.9); box-shadow:0 6px 16px rgba(0,0,0,.35);
+}
+.user-dropdown{
+  position:absolute; right:0; top:calc(100% + 10px); min-width:220px;
+  background:#12181d; border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:12px;
+  box-shadow:0 12px 30px rgba(0,0,0,.35); z-index:50;
+}
+
+/* Responsive: on smaller screens tighten gaps & search width */
+@media (max-width: 1100px){
+  .search-form{ flex-basis:280px; }
+  .nav-links{ gap:10px; }
+}
+@media (max-width: 900px){
+  .nav-links{ display:none; }          /* simple collapse; or add burger later */
+  .search-form{ flex-basis:220px; min-width:160px; }
+}

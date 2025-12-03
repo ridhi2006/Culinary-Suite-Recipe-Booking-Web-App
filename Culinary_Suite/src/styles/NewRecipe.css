@@ -1,0 +1,119 @@
+.add-recipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fffaf4;
+  font-family: "Poppins", sans-serif;
+}
+
+.plus-section {
+  text-align: center;
+}
+
+.plus-btn {
+  font-size: 80px;
+  color: #ff7043;
+  background: white;
+  border: 3px dashed #ff7043;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plus-btn:hover {
+  background: #ff7043;
+  color: white;
+  transform: scale(1.1);
+}
+
+.plus-text {
+  margin-top: 20px;
+  color: #444;
+  font-size: 18px;
+}
+
+.recipe-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-form h2 {
+  text-align: center;
+  color: #ff7043;
+}
+
+.recipe-form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+}
+
+.recipe-form input,
+.recipe-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.preview-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.upload-btn {
+  background: #ff7043;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background: #e85c2b;
+}
+
+.veg-type-selection {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.veg-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.veg-btn,
+.nonveg-btn {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.veg-btn.active,
+.nonveg-btn.active {
+  opacity: 1;
+  transform: scale(1.1);
+}

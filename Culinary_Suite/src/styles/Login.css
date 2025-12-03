@@ -1,0 +1,66 @@
+body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+    .login-box {
+      width: 350px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #7b3f00;
+      font-size: 24px;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      background: #f1f1f1;
+      font-size: 14px;
+    }
+    .login-box input:focus {
+      outline: none;
+      background: #fff;
+      box-shadow: 0 0 8px rgba(255, 140, 0, 0.7);
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #ff512f, #dd2476);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .login-box button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 14px;
+    }

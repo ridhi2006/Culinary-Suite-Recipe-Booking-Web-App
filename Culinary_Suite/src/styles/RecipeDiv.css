@@ -1,0 +1,171 @@
+.recipe-card {
+  background: #fffdf9;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.recipe-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #ffe7c2;
+}
+
+/* Title & details */
+.recipe-details {
+  padding: 16px 18px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-details h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+/* Time + Veg badge row */
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.recipe-time {
+  background: #fff1e0;
+  color: #d35400;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.veg-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: #fff;
+}
+
+.veg-badge.veg {
+  background-color: #00a651;
+}
+
+.veg-badge.all {
+  background-color: #e74c3c;
+}
+
+/* Ingredients list */
+.recipe-ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.recipe-ingredients li {
+  font-size: 0.9rem;
+  color: #333;
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.recipe-ingredients li::before {
+  content: "🥕";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Instructions */
+.recipe-instructions {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Bookmark Button (from BookmarkFeature) */
+.save-btn,
+.bookmark-btn {
+  background: #f77f00;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.save-btn:hover,
+.bookmark-btn:hover {
+  background: #ff9900;
+}
+
+/* Fallback image box */
+.img-fallback {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Responsive grid behavior */
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e74c3c;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.15);
+  color: #c0392b;
+}
+
+/* Title row with delete */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,160 @@
+.bookmark-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.bookmark-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.bookmark-btn:hover {
+  transform: scale(1.05);
+  border-color: #d1d5db;
+}
+
+.bookmark-btn.bookmarked {
+  background-color: #fff5f5;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.bookmark-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #9ca3af;
+  stroke-width: 1.8;
+  transition: all 0.3s ease;
+}
+
+.bookmark-icon.active {
+  fill: #dc2626;
+  stroke: #dc2626;
+  transform: scale(1.1);
+}
+
+/* -------- Modal Styles -------- */
+.bookmark-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmark-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.bookmark-content {
+  position: relative;
+  z-index: 60;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.3s ease;
+}
+
+.bookmark-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.bookmark-content textarea {
+  width: 100%;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.9rem;
+  resize: none;
+  min-height: 80px;
+}
+
+.bookmark-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.save-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #15803d;
+}
+
+.cancel-btn {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* -------- Toast Notification -------- */
+.bookmark-toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  animation: fadeInOut 2.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}

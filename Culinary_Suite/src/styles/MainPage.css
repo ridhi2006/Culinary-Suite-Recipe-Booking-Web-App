@@ -1,0 +1,193 @@
+/* 🌿 Main Page Layout */
+body , html,#root{
+  background-color: #fff8f0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height:100vh;
+  width:100vw;
+}
+
+/* 🌸 Recipes Section */
+.recipes-section {
+  padding: 60px 40px;
+  background: linear-gradient(180deg, #fff8f0 0%, #fff2e0 100%);
+  text-align: center;
+}
+
+.section-title {
+  color: #d65a00;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-shadow: 1px 1px #ffe0c2;
+}
+
+/* 🍴 Recipe Container */
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* 🍲 Recipe Card Style */
+.recipe-card {
+  width: 310px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(255, 150, 60, 0.3);
+}
+
+/* 📸 Image */
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 📝 Recipe Details */
+.recipe-details {
+  padding: 18px;
+  text-align: left;
+}
+
+.recipe-details h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.recipe-details p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* ⏱ Time Badge */
+.recipe-time {
+  display: inline-block;
+  background-color: #ffe6cc;
+  color: #d65a00;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* 🧂 Ingredient List */
+.recipe-ingredients {
+  margin: 10px 0;
+  padding-left: 18px;
+}
+
+.recipe-ingredients li {
+  color: #444;
+  font-size: 0.9rem;
+  list-style: "🥕 ";
+}
+
+/* 🍽 Instructions */
+.recipe-instructions {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* 💫 Responsive */
+@media (max-width: 768px) {
+  .recipe-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-card {
+    width: 90%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* 🎉 Popup Overlay (optional if Popup uses same CSS) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: #fffaf3;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup button {
+  background-color: #d65a00;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.popup button:hover {
+  background-color: #b94e00;
+}
+.add-recipe-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.circle.green {
+  background-color: green;
+}
+
+.circle.red {
+  background-color: red;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}

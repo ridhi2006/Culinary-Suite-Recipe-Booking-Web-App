@@ -1,0 +1,15 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('https://images.unsplash.com/photo-1512058564366-c9e5a0f0f91c?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    height: 400px;
+    color: #ff6600;
+    text-align: center;
+    padding-top: 50px;
+    
+  }
+  .hero h1 { font-size: 48px; margin:0; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-top:50px;}
+  .hero p { font-size: 20px; margin: 15px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); margin-top: 50px; }
+  .hero button { padding: 10px 25px; font-size: 18px; background: #333; border: none; border-radius: 5px; cursor: pointer; color: white; margin-top: 100px; }

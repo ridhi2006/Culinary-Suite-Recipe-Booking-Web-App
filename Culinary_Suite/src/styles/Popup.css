@@ -1,0 +1,80 @@
+/* Popup.css */
+
+/* ✅ Background overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* semi-transparent dark overlay */
+  backdrop-filter: blur(4px); /* soft blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* stays above all content */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ✅ Popup box */
+.popup {
+  background: #fffdf7;
+  border-radius: 16px;
+  padding: 40px 50px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  animation: popupIn 0.4s ease-in-out;
+}
+
+/* ✅ Heading & text */
+.popup h2 {
+  margin-bottom: 12px;
+  color: #ff7b00;
+  font-size: 1.8rem;
+}
+
+.popup p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* ✅ Button styling */
+.popup button {
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #ff7b00;
+  transform: scale(1.05);
+}
+
+/* ✅ Animations */
+@keyframes popupIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
